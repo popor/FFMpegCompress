@@ -33,7 +33,8 @@ s.libraries = "z", "bz2", "iconv"
 # s.requires_arc = true
 
 # 这里是工程配置，这样使用者就不需要手动处理，由pod自动处理了。但是不是本pod配置文件
-s.xcconfig = { 'USER_HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/FFMpegCompress/FFmpegSDK/include' } # ok的,可以直接引用了
+#s.xcconfig = { 'USER_HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/FFMpegCompress/FFmpegSDK/include' } # ok的,可以直接引用了
+s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/FFMpegCompress/FFmpegSDK/include' } # ok的,可以直接引用了
 
 # 这里可以配置.a文件
 s.vendored_libraries = 'FFmpegSDK/lib/*.a'
