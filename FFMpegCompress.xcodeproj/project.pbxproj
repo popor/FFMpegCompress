@@ -32,6 +32,7 @@
 		180BF3862053B61B00BCE40F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 180BF3852053B61B00BCE40F /* libz.tbd */; };
 		180BF3882053B62900BCE40F /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 180BF3872053B62900BCE40F /* libbz2.tbd */; };
 		180BF38A2053B63500BCE40F /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 180BF3892053B63500BCE40F /* libiconv.tbd */; };
+		18CF2D242160B63100FC66FF /* FFMpegCompress.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 18CF2D232160B63100FC66FF /* FFMpegCompress.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +167,7 @@
 		180BF3852053B61B00BCE40F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		180BF3872053B62900BCE40F /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		180BF3892053B63500BCE40F /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		18CF2D232160B63100FC66FF /* FFMpegCompress.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FFMpegCompress.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 		180BF2D22053B15A00BCE40F = {
 			isa = PBXGroup;
 			children = (
+				18CF2D232160B63100FC66FF /* FFMpegCompress.podspec */,
 				180BF37C2053B52800BCE40F /* readme.txt */,
 				180BF37E2053B5D100BCE40F /* input.MOV */,
 				180BF3792053B4F600BCE40F /* FFMpegCompress.h */,
@@ -499,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				180BF2EB2053B15A00BCE40F /* LaunchScreen.storyboard in Resources */,
+				18CF2D242160B63100FC66FF /* FFMpegCompress.podspec in Resources */,
 				180BF2E82053B15A00BCE40F /* Assets.xcassets in Resources */,
 				180BF37F2053B5D100BCE40F /* input.MOV in Resources */,
 				180BF37D2053B52800BCE40F /* readme.txt in Resources */,
