@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "FFMpegCompress"
-s.version      = "0.0.25"
+s.version      = "0.0.26"
 s.summary      = "FFMpegCompress contain a available FFMpeg SDK for OC"
 
 s.homepage     = "https://github.com/popor/FFMpegCompress"
@@ -45,9 +45,9 @@ s.subspec 'FFmpegSDK' do |fsdk|
 fsdk.source_files = 'FFmpegSDK/*.{h,c}'
 
 # 第一个文件夹
-fsdk.subspec 'lib' do |lib|
-lib.source_files = 'FFmpegSDK/lib/*.a'
-end
+#fsdk.subspec 'lib' do |lib|
+#lib.source_files = 'FFmpegSDK/lib/*.a'
+#end
 
 # 第二个文件夹
 fsdk.subspec 'include' do |include|

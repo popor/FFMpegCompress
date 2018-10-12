@@ -659,7 +659,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6SK6RQ8S8Q;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/FFmpegSDK/include";
 				INFOPLIST_FILE = FFMpegCompress/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -667,7 +667,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/FFmpegSDK/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.popor.FFMpegCompress;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifcar99.wkq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -678,7 +678,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6SK6RQ8S8Q;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/FFmpegSDK/include";
 				INFOPLIST_FILE = FFMpegCompress/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -686,7 +686,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/FFmpegSDK/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.popor.FFMpegCompress;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifcar99.wkq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
