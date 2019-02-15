@@ -43,10 +43,16 @@
     }
     
     // local disk video url path
-    NSString * videoUrlPath = [[NSBundle mainBundle] pathForResource:@"input" ofType:@"MOV"];
     // @"file://var/xxxxxx"; // @"var/xxxxxx";
+    NSString * videoUrlPath = [[NSBundle mainBundle] pathForResource:@"input" ofType:@"MOV"];
     
-    CGSize size = CGSizeMake(540, 960);//
+    videoUrlPath = [[NSBundle mainBundle] pathForResource:@"input2" ofType:@"MP4"];
+    
+    //videoUrlPath = [[NSBundle mainBundle] pathForResource:@"input11" ofType:@"MOV"];
+    //videoUrlPath = [[NSBundle mainBundle] pathForResource:@"input12" ofType:@"MOV"];
+    //videoUrlPath = [[NSBundle mainBundle] pathForResource:@"input13" ofType:@"MOV"];
+    
+    CGSize size = CGSizeMake(540, 960);
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *docDir = [paths objectAtIndex:0];

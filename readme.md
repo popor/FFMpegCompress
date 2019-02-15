@@ -10,13 +10,13 @@ if copy FFMpegCompress, you need modify list:
   2.Header Search Paths  :$(PROJECT_DIR)/__XXX__/FFmpeg-iOS/include
 
 you can also use cocoapod: 
-  pod 'FFMpegCompress', :git=>'https://github.com/popor/FFMpegCompress.git', :tag => '0.0.26'
+  pod 'FFMpegCompress', :git=>'https://github.com/popor/FFMpegCompress.git', :tag => '0.0.27'
 
   *****
-  must add :tag => '0.0.26', because FFMpegCompress doesn't pass pod validate, if not will take a long time redownload FFMpegCompress when you run 'pod update --no-repo-update'.
+  must add :tag => '0.0.27', because FFMpegCompress doesn't pass pod validate, if not will take a long time redownload FFMpegCompress when you run 'pod update --no-repo-update'.
 
-##### 即使加上:tag => '0.0.26',也会在执行update的时候触发下载完整代码的情形,所以推荐使用PoporFFmpeg.
-##### ~~一定要带上:tag => '0.0.26',因为没有通过pod验证,假如没有增加会在执行更新'pod update --no-repo-update'.消耗大量时间重新下载FFMpegCompress.~~
+##### 即使加上:tag => '0.0.27',也会在执行update的时候触发下载完整代码的情形,所以推荐使用PoporFFmpeg.
+##### ~~一定要带上:tag => '0.0.27',因为没有通过pod验证,假如没有增加会在执行更新'pod update --no-repo-update'.消耗大量时间重新下载FFMpegCompress.~~
 
   *****
 

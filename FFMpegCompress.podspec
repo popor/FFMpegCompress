@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "FFMpegCompress"
-s.version      = "0.0.26"
+s.version      = "0.0.27"
 s.summary      = "FFMpegCompress contain a available FFMpeg SDK for OC"
 
 s.homepage     = "https://github.com/popor/FFMpegCompress"

@@ -81,12 +81,28 @@ static NSString * ThreadCompressName = @"FFMpegCompressVideo";
     if([tracks count] > 0) {
         AVAssetTrack *videoTrack = [tracks objectAtIndex:0];
         CGAffineTransform t = videoTrack.preferredTransform;//这里的矩阵有旋转角度，转换一下即可
-        NSLog(@"=====hello  width:%f===height:%f",videoTrack.naturalSize.width,videoTrack.naturalSize.height);
-        if (t.tx==0) {
+        //NSLog(@"=====video size  width:%f===height:%f",videoTrack.naturalSize.width,videoTrack.naturalSize.height);
+        
+        BOOL upDown = YES;
+        if(t.a == 0 && t.b == 1.0 && t.c == -1.0 && t.d == 0){
+            // Portrait
+            upDown = YES;
+        }else if(t.a == 0 && t.b == -1.0 && t.c == 1.0 && t.d == 0){
+            // PortraitUpsideDown
+            upDown = YES;
+        }else if(t.a == 1.0 && t.b == 0 && t.c == 0 && t.d == 1.0){
+            // LandscapeRight
+            upDown = NO;
+        }else if(t.a == -1.0 && t.b == 0 && t.c == 0 && t.d == -1.0){
+            // LandscapeLeft
+            upDown = NO;
+        }
+        if (!upDown) {
             return CGSizeMake(videoTrack.naturalSize.width, videoTrack.naturalSize.height);
         }else{
             return CGSizeMake(videoTrack.naturalSize.height, videoTrack.naturalSize.width);
         }
+        
     }else{
         return CGSizeZero;
     }
@@ -213,5 +229,35 @@ static NSString * ThreadCompressName = @"FFMpegCompressVideo";
 //        }
 //    }];
 //}
+
+// 根据视频得到视频旋转方向,可以依此获得对应的角度或者真正的size.
+// -vf @"transpose=2" 设置视频内容是否旋转.
+// https://www.5yun.org/13117.html
+- (NSUInteger)degressWithURL:(NSURL *)url {
+    NSUInteger degress = 0;
+    
+    AVAsset *asset = [AVAsset assetWithURL:url];
+    NSArray *tracks = [asset tracksWithMediaType:AVMediaTypeVideo];
+    if([tracks count] > 0) {
+        AVAssetTrack *videoTrack = [tracks objectAtIndex:0];
+        CGAffineTransform t = videoTrack.preferredTransform;
+        
+        if(t.a == 0 && t.b == 1.0 && t.c == -1.0 && t.d == 0){
+            // Portrait
+            degress = 90;
+        }else if(t.a == 0 && t.b == -1.0 && t.c == 1.0 && t.d == 0){
+            // PortraitUpsideDown
+            degress = 270;
+        }else if(t.a == 1.0 && t.b == 0 && t.c == 0 && t.d == 1.0){
+            // LandscapeRight
+            degress = 0;
+        }else if(t.a == -1.0 && t.b == 0 && t.c == 0 && t.d == -1.0){
+            // LandscapeLeft
+            degress = 180;
+        }
+    }
+    
+    return degress;
+}
 
 @end
