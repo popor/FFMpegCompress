@@ -1,3 +1,5 @@
+<a href='https://github.com/popor/mybox'> MyBox </a>
+
 FFMpeg code copy from https://github.com/fanmaoyu0871/VideoCutterDemo
 
 This sdk used to compress video with FFMpeg in CPU but not GPU.
@@ -13,10 +15,12 @@ you can also use cocoapod:
   *****
   must add :tag => '0.0.26', because FFMpegCompress doesn't pass pod validate, if not will take a long time redownload FFMpegCompress when you run 'pod update --no-repo-update'.
 
-  一定要带上:tag => '0.0.26',因为没有通过pod验证,假如没有增加会在执行更新'pod update --no-repo-update'.消耗大量时间重新下载FFMpegCompress.
+##### 即使加上:tag => '0.0.26',也会在执行update的时候触发下载完整代码的情形,所以推荐使用PoporFFmpeg.
+##### ~~一定要带上:tag => '0.0.26',因为没有通过pod验证,假如没有增加会在执行更新'pod update --no-repo-update'.消耗大量时间重新下载FFMpegCompress.~~
 
   *****
 
+```
 if you app have app-prefix.pch, you need modify
 #ifdef __OBJC__
     #import something
@@ -42,3 +46,5 @@ NSString *tPath ; // compress video save path
         NSLog(@"FFMpegCompress error: %@", info);
     }
 }];
+
+```
